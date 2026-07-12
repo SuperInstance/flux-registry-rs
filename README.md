@@ -6,6 +6,10 @@ A Rust CLI for the FLUX Registry — download, inspect, and execute pre-compiled
 agent policies from the static GitHub registry. Same policies, same bytecode,
 different shell.
 
+## Philosophy
+
+Part of [Working Animal Architecture](https://github.com/SuperInstance/AI-Writings), where **γ + η = C** (genome + nurture = capability). The FLUX Registry is the **breed catalog** — pre-compiled, verified policies that any working animal can be trained on. Install a policy like choosing a breed for a task: the right dog for the right job, the right bytecode for the right fence.
+
 ## Install
 
 ```bash
@@ -80,7 +84,7 @@ flux-registry info deadband-controller
 │                               │ │  ISA support)│ │   │
 │                               │ └──────────────┘ │   │
 │                               └──────────────────┘   │
-└──────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────┘
 ```
 
 The CLI includes a built-in FLX0 stack-based mini VM for executing registry
