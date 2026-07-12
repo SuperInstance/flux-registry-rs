@@ -125,7 +125,15 @@ Every policy declares conservation limits:
 The VM enforces these at runtime — a policy cannot exceed its step count or
 memory allocation. This makes FLUX policies safe to run as untrusted code.
 
-## Cross-Language Compatibility
+## Cross-Implementation
+
+This component exists in two languages:
+- **Python** (`pip install flux-registry`) — [SuperInstance/flux-registry](https://github.com/SuperInstance/flux-registry)
+- **Rust** (`cargo install flux-registry-cli`) — [SuperInstance/flux-registry-rs](https://github.com/SuperInstance/flux-registry-rs)
+
+Both implement the same specification. Choose based on your runtime.
+
+### Cross-Language Compatibility
 
 The same policy bytecode runs across all FLUX implementations:
 
