@@ -1,0 +1,32 @@
+[package]
+name = "flux-registry-cli"
+version = "0.1.0"
+edition = "2021"
+description = "FLUX Registry CLI — install and run pre-compiled agent policies"
+license = "MIT"
+authors = ["SuperInstance"]
+keywords = ["flux", "vm", "policy", "registry", "agent"]
+categories = ["command-line-utilities", "development-tools"]
+homepage = "https://github.com/SuperInstance/flux-registry-rs"
+repository = "https://github.com/SuperInstance/flux-registry-rs"
+
+[lib]
+name = "flux_registry_cli_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "flux-registry"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+ureq = { version = "2", features = ["json"] }
+anyhow = "1"
+dirs = "5"
+fluxvm = "0.1"
+
+[dev-dependencies]
+tempfile = "3"
