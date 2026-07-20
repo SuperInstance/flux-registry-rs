@@ -105,7 +105,8 @@ fn opcode_name(op: u8) -> &'static str {
 /// Returns `(value, new_pc)`.
 fn read_operand(bytecode: &[u8], pc: usize) -> (i32, usize) {
     if pc >= bytecode.len() {
-        return (0, pc);
+        // Truncated instruction — return HALT signal by giving pc beyond end
+        return (0, bytecode.len());
     }
     let opcode = bytecode[pc - 1]; // opcode byte was at pc-1
 
